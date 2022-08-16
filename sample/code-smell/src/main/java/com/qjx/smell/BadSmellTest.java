@@ -5,7 +5,11 @@ public class BadSmellTest {
         execute(this::sendBook);
     }
 
-    public void execute(final Runnable runnable) {
+    private void sendFail() {
+        System.out.println("sent fail....");
+    }
+
+    private void execute(final Runnable runnable) {
         try {
             runnable.run();
         } catch (Exception e) {
@@ -13,7 +17,4 @@ public class BadSmellTest {
         }
     }
 
-    private void sendFail() {
-        System.out.println("sent fail....");
-    }
 }
