@@ -1,4 +1,4 @@
-package com.qjx.smell;
+package com.qjx.smell.bad;
 
 public class BadSmellTest {
     private void sendBook() {
