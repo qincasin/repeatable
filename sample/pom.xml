@@ -17,6 +17,7 @@
     <modules>
         <module>shein-sample</module>
         <module>code-smell</module>
+        <module>rpc-sample</module>
     </modules>
     <properties>
         <java.version>17</java.version>
