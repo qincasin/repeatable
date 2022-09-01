@@ -18,26 +18,27 @@ import java.io.IOException;
 
 public class Indexer {
     private final IndexWriter writer;
+
     public static void main(String[] args) throws IOException {
-        if (args.length!=2){
-            throw new IllegalArgumentException("Usage: java "+Indexer.class.getName() + "<index dir> <data dir>");
+        if (args.length != 2) {
+            throw new IllegalArgumentException("Usage: java " + Indexer.class.getName() + "<index dir> <data dir>");
         }
 
         //获取字段
         String indexDir = args[0];
         String dataDir = args[1];
 
-        long start  = System.currentTimeMillis();
+        long start = System.currentTimeMillis();
         //创建索引
 
         Indexer indexer = new Indexer(indexDir);
 
 
         //执行索引
-        int numIndexed ;
+        int numIndexed;
         try {
-            numIndexed = indexer.index(dataDir,new TextFilesFilter());
-        }finally {
+            numIndexed = indexer.index(dataDir, new TextFilesFilter());
+        } finally {
             indexer.close();
         }
 
@@ -49,11 +50,12 @@ public class Indexer {
 
     }
 
-    private int index(String dataDir, FileFilter filter) throws IOException{
+    private int index(String dataDir, FileFilter filter) throws IOException {
         File[] files = new File(dataDir).listFiles();
         assert files != null;
         for (File file : files) {
-            if (!file.isDirectory() && !file.isHidden() && file.exists() && file.canRead() && (filter == null || filter.accept(file))){
+            if (!file.isDirectory() && !file.isHidden() && file.exists() && file.canRead() && (filter == null
+                    || filter.accept(file))) {
                 indexFile(file);
             }
         }
@@ -61,8 +63,8 @@ public class Indexer {
     }
 
 
-    private void indexFile(File file) throws IOException{
-        System.out.println("Indexing "+file.getCanonicalPath());
+    private void indexFile(File file) throws IOException {
+        System.out.println("Indexing " + file.getCanonicalPath());
         Document document = getDocument(file);
         writer.addDocument(document);
     }
@@ -82,10 +84,10 @@ public class Indexer {
         //参数3 是否存储 store
         Field fieldName = new TextField("name", fileName, Field.Store.YES);
         Field fieldPath = new StoredField("path", path);
-        Field fieldContext = new TextField("context",context,Field.Store.YES);
+        Field fieldContext = new TextField("context", context, Field.Store.YES);
 
         //创建文档对象
-        Document document =new Document();
+        Document document = new Document();
         //向文档对象中添加域
         document.add(fieldName);
         document.add(fieldPath);
@@ -102,7 +104,7 @@ public class Indexer {
         Directory dir = FSDirectory.open(new File(indexDir).toPath());
         Analyzer analyzer = new StandardAnalyzer();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        writer = new IndexWriter(dir,config);
+        writer = new IndexWriter(dir, config);
     }
 
     private static class TextFilesFilter implements FileFilter {
