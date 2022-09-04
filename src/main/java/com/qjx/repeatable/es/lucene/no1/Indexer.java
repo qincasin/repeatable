@@ -16,6 +16,9 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
 
+/**
+ * @author qinjiaxing
+ */
 public class Indexer {
     private final IndexWriter writer;
 
