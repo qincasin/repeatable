@@ -1,10 +1,10 @@
-package com.qjx.shein;
+package com.qjx.pattern;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SheinSampleApplicationTests {
+class PatternSampleApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package com.qjx.shein.migration.coorworker;
+package com.qjx.pattern.migration.coorworker;
 
 
 /**

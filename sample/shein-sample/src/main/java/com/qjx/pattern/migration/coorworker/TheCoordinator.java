@@ -1,6 +1,4 @@
-package com.qjx.shein.migration.coorworker;
-
-import java.util.List;
+package com.qjx.pattern.migration.coorworker;
 
 /**
  * 用来协调TheWorker的协调者。其实现类中的 启动/终止/暂停/恢复/改变线程数量 都是synchronized的，因为对于同一个Coordinator实例 *不允许* 同时进行修改
