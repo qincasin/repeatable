@@ -43,13 +43,6 @@ public class YmcasApi {
             }
         }
     }
-
-    private static NacosData getContent() {
-
-        return null;
-    }
-
-
     protected static List<ContentDTO> getList2(String fileName) {
         String path = YmcasApi.class.getClassLoader().getResource(fileName).getPath();
         String json = readJsonFile(path);
