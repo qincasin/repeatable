@@ -4,21 +4,18 @@ import com.qjx.pattern.trash.Aluminum;
 import com.qjx.pattern.trash.Bins;
 import com.qjx.pattern.trash.Glass;
 import com.qjx.pattern.trash.Paper;
-import com.qjx.pattern.trash.Price;
 import com.qjx.pattern.trash.Trash;
-import org.springframework.cglib.transform.AbstractProcessTask;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.SplittableRandom;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * @author: qinjiaxing
  * @Date: 2022/9/24 14:08
- * @Description:
+ * @Description: 用反射实现的垃圾收集
  */
 
 class SimpleFactory {
@@ -36,6 +33,7 @@ class SimpleFactory {
 public class RecycleA {
     public static void main(String[] args) {
         List<Trash> bin = Stream.generate(SimpleFactory::random).limit(10).toList();
+
         Bins bins = new Bins(bin);
         bins.show();
     }

@@ -6,7 +6,9 @@ import java.util.List;
 /**
  * @author: qinjiaxing
  * @Date: 2022/9/24 14:03
- * @Description: 垃圾
+ * @Description:
+ * 一旦List<Trash> 装满了 Trash 对象，
+ * Bins 构造器变回通过 instanceof 将该list分类到其类型化的垃圾箱中
  */
 public class Bins {
     final List<Trash> bin;
@@ -33,11 +35,11 @@ public class Bins {
         });
     }
 
-    public void show(){
-        TrashValue.sum(aluminums,"Aluminum");
-        TrashValue.sum(papers,"Paper");
-        TrashValue.sum(glasses,"Glass");
-        TrashValue.sum(cardboards,"Cardboard");
-        TrashValue.sum(bin,"Trash");
+    public void show() {
+        TrashValue.sum(aluminums, "Aluminum");
+        TrashValue.sum(papers, "Paper");
+        TrashValue.sum(glasses, "Glass");
+        TrashValue.sum(cardboards, "Cardboard");
+        TrashValue.sum(bin, "Trash");
     }
 }
