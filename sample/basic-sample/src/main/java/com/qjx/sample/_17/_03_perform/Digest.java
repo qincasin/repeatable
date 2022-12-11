@@ -64,8 +64,8 @@ public sealed abstract class Digest {
 
     public static Returned<Digest> of3(String alg) {
         return switch (alg) {
-            case "SHA-256" -> new Returned.ReturnValue(new Sha256());
-            case "SHA-512" -> new Returned.ReturnValue(new Sha512());
+            case "SHA-256" -> new Returned.ReturnValue<>(new Sha256());
+            case "SHA-512" -> new Returned.ReturnValue<>(new Sha512());
             case null, default -> new Returned.ErrorCode<>(-1);
         };
     }
