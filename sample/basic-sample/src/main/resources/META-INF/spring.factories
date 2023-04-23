@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.qjx.sample.metrics.PerformanceMetricsAutoConfiguration,\
+  com.qjx.sample.invoke.mark.MarkConfiguration,\
+  com.qjx.sample.invoke.InvokeConfiguration
