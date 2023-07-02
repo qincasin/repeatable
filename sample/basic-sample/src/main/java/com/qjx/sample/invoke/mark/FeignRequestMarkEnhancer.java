@@ -1,6 +1,6 @@
 package com.qjx.sample.invoke.mark;
 
-import feign.RequestTemplate;
+import com.qjx.sample.invoke.RequestTemplate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

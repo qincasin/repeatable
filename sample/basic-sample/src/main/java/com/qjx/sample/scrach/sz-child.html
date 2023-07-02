@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+    Untitled Page
+</title>
+    <meta http-equiv="X-UA-Compatible"content="IE=edge,chrome=1"/>
+    <script type="text/javascript" src="../layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../../layui/css/layui.css" />
+    <script type="text/javascript">
+      window.showModalDialog = function (url, name, rer) {
+        var layer = layui.layer;
+        //var width = document.body.scrollWidth-10;
+        //var height = this.parent.document.body.scrollHeight-40
+        var index = layer.open({
+          title: '详细信息',
+          type: 2,
+          content: [url, 'yes'],
+          area: ['1000px', '700px'],
+          maxmin: true
+        });
+      }
+    </script>
+</head>
+<body>
+<form method="post" action="./SaleInfoHouseView.aspx?SHSE_ID=517696_MD004" id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM5MTM0ODM3NQ9kFgJmD2QWAgIDD2QWAgIDD2QWLgIDDw8WAh4EVGV4dAUMMTbluaIxNzAy5a6kZGQCBQ8PFgIfAAUCMTdkZAIHDw8WAh8ABQIxN2RkAgkPDxYCHwAFBzHljZXlhYNkZAILDw8WAh8ABQQxNzAyZGQCDQ9kFgYCAQ8PFgIfAAUBNGRkAgMPDxYCHwAFATJkZAIFDw8WAh8ABQEyZGQCDw8PFgIfAAUG5Y+v5ZSuZGQCEQ8PFgIfAAUM6Z2e5pS/562W5oCnZGQCEw8PFgIfAAUG5L2P5a6FZGQCFQ8PFgIfAAUSMjAyNC8xMi8zMCAwOjAwOjAwZGQCFw8PFgIfAAUP6ZKi562L5re35Yed5ZyfZGQCHw8QZGQWAQIBZAIhDw8WAh8ABQzlhajoo4Xkv67miL9kZAIjDw8WAh8ABREyMDIyLzQvMjUgMDowMDowMGRkAiUPDxYCHwAFETIwMjUvMi8yNiAwOjAwOjAwZGQCJw8PFgIfAAUGMTEzLjE4ZGQCKQ8PFgIfAAUFMjkuNTBkZAIrDw8WAh8ABQYxNDIuNjhkZAItDw8WAh8ABQc0MjY4NzAwZGQCLw8PFgIfAAUFMjk5MThkZAI1Dw8WAh8ABRjlkoznhabnkp/luq0xNuW5ojE3MDLlrqRkZAI3DxBkZBYBZmQCOQ8PFgIfAAUBM2RkZLOrCG5tNkN5VilUQiu0e3yhoFtbIH+kF4F3HES58cjg" />
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="49CBF4E5" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAB/25vH42qdJTcIj/lBKSr7DXGtedgzLnrUel26J9Z+8/nOpXyWPriMF7rg2/NvhFKR7ftV0ANTNrRo1dWMxtSwN/5Fr8Vm7mI7JLKBz0aDnWVHhBHlBfL4DA7N1Gdg+nRvibtluQkoYyfx3OCyS2gmfgmwLRaEURhkTLS/9DlulivVoJEZgdnfok8rqxcMKSRKoTv0XTAdqi5P7W/jHtudJd6KzHQtxNJ/wCqxunlUN2BA9gVDg90A8Q4FcXlunAG7ImO1ersjvyjLiXDKVflH+KAIb5tCvKVqTURtCJw010sH2+6BQRU8q0HsVbw7gidwkrMkizUOpnLFk2G/2fvYxZhJ9ntlD+dkDgaiC73C8X1GuhRMEPHsSUKnuIsYr2pO9+1IWTbC+Vv9FqkXfOtNw/HnwN9jYVxCYVC/trHVQ/AMVDoAGpHHZ8oFPcL6bcygweYkqMnuhVKel8FBFP659t9QtEn7acmDcLo3Vu+p3qHaVXA1OKf8PmlqOkqHHwHvgABGVfW8/2W81ukpdvp1Mggk4NLiIkEgWj2R7voUB63CyoDkzxfM5jTcNbcia2aPNotoTMWThGORqfQaQ/OwqARI47uFkh0LuFP3HaIbfW6aLmorVE6X4+4fRVEs0xyNIrs9fXYjsTEzs6yGMnXjqNpnDeAwrFsoQuek+fESK+27ySi1mO/HCx4E0+pHbbsQ=" />
+    </div>
+    <div>
+        <table width="100%" style="border-right: black 1px solid; border-top: black 1px solid; border-left: black 1px solid; border-bottom: black 1px solid;">
+            <tr><td style="background-color: #ff9933; width: 100%; height: 40px; font-weight: bold; font-size: 18px; color: white; font-family: 幼圆; text-align: center;">
+
+                房屋信息显示
+
+            </td></tr>
+            <tr><td style="width: 100%; vertical-align: top; text-align: center;">
+
+                <span id="MainContent_lal_msg" style="color:Red;"></span>
+                <table border="1" style="table-layout: auto; border-collapse: collapse;">
+                    <tr>
+                        <td align="right">
+                            座号：</td>
+                        <td colspan="3" style="text-align: left">
+                            <input name="ctl00$MainContent$txt_HSE_Located" type="text" value="16幢1702室" readonly="readonly" id="MainContent_txt_HSE_Located" style="border-style:Groove;width:173px;" />&nbsp;
+                        </td>
+                        <td align="right" style="width: 138px">
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            层次：
+                        </td>
+                        <td style="width: 132px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_HSE_LevelCode" type="text" value="17" readonly="readonly" id="MainContent_txt_HSE_LevelCode" style="border-style:Groove;width:89px;" /></td>
+                        <td style="width: 145px">
+                            所属自然层：</td>
+                        <td style="width: 63px">
+                            <input name="ctl00$MainContent$txt_Hes_LevelName" type="text" value="17" readonly="readonly" id="MainContent_txt_Hes_LevelName" style="border-style:Groove;width:89px;" /></td>
+                        <td align="right" style="width: 138px">
+                            单元号：</td>
+                        <td style="text-align: left">
+                            <input name="ctl00$MainContent$txt_HSE_CellCode" type="text" value="1单元" readonly="readonly" id="MainContent_txt_HSE_CellCode" style="border-style:Groove;width:89px;" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            室号(编号)：</td>
+                        <td style="width: 132px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_Hse_URCode" type="text" value="1702" readonly="readonly" id="MainContent_txt_Hse_URCode" style="border-style:Groove;width:89px;" /></td>
+                        <td style="width: 145px">
+                            套型：</td>
+                        <td style="width: 63px">
+                            <div id="MainContent_Panel1" style="height:10px;width:130px;">
+
+                                <input name="ctl00$MainContent$txt_Hse_Type_Room" type="text" value="4" readonly="readonly" id="MainContent_txt_Hse_Type_Room" style="border-style:None;width:15px;" />室<input name="ctl00$MainContent$txt_Hse_Type_Hall" type="text" value="2" readonly="readonly" id="MainContent_txt_Hse_Type_Hall" style="border-style:None;width:15px;" />厅<input name="ctl00$MainContent$txt_HSE_Bathroom" type="text" value="2" readonly="readonly" id="MainContent_txt_HSE_Bathroom" style="border-style:None;width:15px;" />卫
+                            </div>
+                        </td>
+                        <td align="right" style="width: 138px">
+                            房屋性质:</td>
+                        <td colspan="1" style="text-align: left">
+                            <input name="ctl00$MainContent$txt_ht_name" type="text" value="可售" readonly="readonly" id="MainContent_txt_ht_name" style="border-style:Groove;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="height: 18px">
+                            类型：</td>
+                        <td colspan="4" style="height: 18px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_SHSE_ISPOLICY" type="text" value="非政策性" readonly="readonly" id="MainContent_txt_SHSE_ISPOLICY" style="border-style:Groove;width:89px;" />
+                        </td>
+                        <td style="height: 18px">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="height: 18px">
+                            用途：</td>
+                        <td colspan="4" style="height: 18px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_Hse_Class" type="text" value="住宅" readonly="readonly" id="MainContent_txt_Hse_Class" style="border-style:Groove;width:89px;" /></td>
+                        <td style="height: 18px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            建成日期:</td>
+                        <td colspan="3" style="text-align: left">
+
+                            <span id="MainContent_lb_PH_Cdate">2024/12/30 0:00:00</span>
+                            &nbsp;
+                        </td>
+                        <td align="right" style="width: 138px">
+                            结构类型：</td>
+                        <td style="text-align: left">
+                            <input name="ctl00$MainContent$txt_hs_name" type="text" value="钢筋混凝土" readonly="readonly" id="MainContent_txt_hs_name" style="border-style:Groove;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            房屋所有权登记证明编号：</td>
+                        <td colspan="3" style="text-align: left">
+                            &nbsp;
+                            <input name="ctl00$MainContent$txt_HSE_Ownership" type="text" readonly="readonly" id="MainContent_txt_HSE_Ownership" style="border-style:Groove;" />
+                        </td>
+                        <td align="right" style="width: 138px">
+                            土地分割转让许可证编号：</td>
+                        <td style="text-align: left">
+                            <input name="ctl00$MainContent$txt_HSE_LDTPermit_SN" type="text" maxlength="20" readonly="readonly" id="MainContent_txt_HSE_LDTPermit_SN" style="border-style:Groove;" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <span id="MainContent_Label3" style="display:inline-block;width:128px;">抵押情况</span>：</td>
+                        <td colspan="3" style="text-align: left">
+                            &nbsp;<select name="ctl00$MainContent$ddl_ProType" id="MainContent_ddl_ProType" disabled="disabled" class="aspNetDisabled" style="width:116px;">
+                            <option value="MT000">无抵押</option>
+                            <option selected="selected" value="MT001">土地抵押</option>
+
+                        </select></td>
+                        <td align="right" style="width: 138px">
+                            装修情况：</td>
+                        <td style="text-align: left">
+                            <input name="ctl00$MainContent$txt_hf_name" type="text" value="全装修房" readonly="readonly" id="MainContent_txt_hf_name" style="border-style:Groove;" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">
+                            抵押起始日期：</td>
+                        <td colspan="3" style="text-align: left">
+
+                            &nbsp;&nbsp;
+                            <span id="MainContent_lb_ProStar">2022/4/25 0:00:00</span></td>
+                        <td align="right" style="width: 138px">
+                            抵押终止日期：</td>
+                        <td style="text-align: left">
+                            <span id="MainContent_lb_ProEnd">2025/2/26 0:00:00</span></td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            套内建筑面积（平方米）</td>
+                        <td style="width: 132px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_SFLOOR_IN" type="text" value="113.18" readonly="readonly" id="MainContent_txt_SFLOOR_IN" style="border-style:Groove;width:112px;" /></td>
+                        <td style="width: 145px">
+                            分摊建筑面积（平方米）：</td>
+                        <td style="width: 63px">
+                            <input name="ctl00$MainContent$txt_SFLOOR_FH" type="text" value="29.50" readonly="readonly" id="MainContent_txt_SFLOOR_FH" style="border-style:Groove;width:92px;" /></td>
+                        <td align="right" >
+                            总建筑面积（平方米）：</td>
+                        <td style="text-align: left">
+                            &nbsp;<input name="ctl00$MainContent$txt_AreaAll" type="text" value="142.68" readonly="readonly" id="MainContent_txt_AreaAll" style="border-style:Groove;" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="height: 27px">
+                            总价格（元）:</td>
+                        <td style="width: 132px; height: 27px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_Hse_TSUM" type="text" value="4268700" readonly="readonly" id="MainContent_txt_Hse_TSUM" style="border-style:Groove;width:112px;" /></td>
+
+                        <td align="right" style="width: 138px; height: 27px">
+                            单价（元/平方米）：</td>
+                        <td style="height: 27px; text-align: left;">
+                            <input name="ctl00$MainContent$txt_SFLOOR_PRICE" type="text" value="29918" readonly="readonly" id="MainContent_txt_SFLOOR_PRICE" style="border-style:Groove;" /></td>
+                        <td style="width: 145px; height: 27px">
+                            <span id="MainContent_rzbz">日照标准：</span>
+
+                        </td>
+                        <td style="height: 27px">
+                            <table id="MainContent_rdt_SHSE_RZBZ">
+                                <tr>
+                                    <td><input id="MainContent_rdt_SHSE_RZBZ_0" type="radio" name="ctl00$MainContent$rdt_SHSE_RZBZ" value="1" checked="checked" /><label for="MainContent_rdt_SHSE_RZBZ_0">符合</label></td><td><input id="MainContent_rdt_SHSE_RZBZ_1" type="radio" name="ctl00$MainContent$rdt_SHSE_RZBZ" value="0" /><label for="MainContent_rdt_SHSE_RZBZ_1">不符合</label></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            公安门牌号：</td>
+                        <td colspan="5" style="text-align: left">
+                            <input name="ctl00$MainContent$txt_Address" type="text" value="和煦璟庭16幢1702室" readonly="readonly" id="MainContent_txt_Address" style="border-style:Groove;width:457px;" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" colspan="2">
+                            房屋层高是否超过2.2米：</td>
+                        <td style="width: 145px" valign="middle">
+                            <table id="MainContent_rbt_HSE_IsLevelHeigh" class="aspNetDisabled">
+                                <tr>
+                                    <td><span class="aspNetDisabled"><input id="MainContent_rbt_HSE_IsLevelHeigh_0" type="radio" name="ctl00$MainContent$rbt_HSE_IsLevelHeigh" value="1" checked="checked" disabled="disabled" /><label for="MainContent_rbt_HSE_IsLevelHeigh_0">是</label></span></td><td><span class="aspNetDisabled"><input id="MainContent_rbt_HSE_IsLevelHeigh_1" type="radio" name="ctl00$MainContent$rbt_HSE_IsLevelHeigh" value="0" disabled="disabled" /><label for="MainContent_rbt_HSE_IsLevelHeigh_1">否</label></span></td>
+                                </tr>
+                            </table></td>
+                        <td style="width: 63px">
+                        </td>
+                        <td align="right" style="width: 138px">
+                            房屋层高（米）：</td>
+                        <td>
+                            <input name="ctl00$MainContent$txt_LevelHeigh" type="text" value="3" maxlength="5" readonly="readonly" id="MainContent_txt_LevelHeigh" style="border-style:Groove;width:61px;" /></td>
+                    </tr>
+                </table>
+                <style type="text/css" media="print">
+                  .noprint{display : none }
+                </style>
+                <div class="noprint" style="width: 400px; margin-left: 100px">
+                    <button class="layui-btn " onclick="javascript:window.print();return false;">
+                        打印</button>
+
+                </div>
+
+            </td></tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>

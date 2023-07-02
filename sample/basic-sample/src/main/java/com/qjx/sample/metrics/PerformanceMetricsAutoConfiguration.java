@@ -17,10 +17,10 @@ import org.springframework.context.annotation.Configuration;
  * @author qinjiaxing on 2023/2/21
  * @author <others>
  */
-@Configuration
-@AutoConfigureOrder(-1)
-@ConditionalOnProperty(prefix = "qjx.base.metrics.enable", name = "enabled", havingValue = "true", matchIfMissing = true)
-@ConditionalOnExpression(value = "${base.metrics.enabled} || ${qjx.base.metrics.enabled}")
+// @Configuration
+// @AutoConfigureOrder(-1)
+// @ConditionalOnProperty(prefix = "qjx.base.metrics.enable", name = "enabled", havingValue = "true", matchIfMissing = true)
+// @ConditionalOnExpression(value = "${base.metrics.enabled} || ${qjx.base.metrics.enabled}")
 public class PerformanceMetricsAutoConfiguration {
 
     @Bean

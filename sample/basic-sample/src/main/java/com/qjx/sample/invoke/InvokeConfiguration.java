@@ -13,12 +13,12 @@ import org.springframework.core.env.Environment;
  * @author qinjiaxing on 2023/4/23
  * @author <others>
  */
-@Configuration
+// @Configuration
 public class InvokeConfiguration {
 
     public static final String USKD_INVOCKE_PREFIX = "usdk.invocation";
 
-    @Bean
+    // @Bean
     @ConditionalOnMissingBean
     @ConfigurationProperties(prefix = USKD_INVOCKE_PREFIX)
     public InvokePolicyConfigProperties invokePolicy(Environment environment) {
@@ -27,7 +27,7 @@ public class InvokeConfiguration {
         return properties;
     }
 
-    @Bean
+    // @Bean
     @ConditionalOnMissingBean
     @ConfigurationProperties(prefix = USKD_INVOCKE_PREFIX + ".data")
     public InvokeMetaDataConfigProperties invokeData(Environment environment) {

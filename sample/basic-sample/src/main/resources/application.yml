@@ -1,0 +1,45 @@
+server:
+  port: 8099
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /
+    metrics:
+      enable: true
+    prometheus:
+      enable: true
+#  endpoint:
+#    health:
+#      show-details: always
+#      cache:
+#        time-to-live: 12000ms
+#  server:
+#    add-application-context-header: false
+#  health:
+#    db:
+#      enabled: false
+
+
+#test:
+#  value1:
+#    123
+#usdk:
+#  test:
+#    value1:
+#      234
+
+base:
+  metrics:
+    enabled: false
+
+qjx:
+  base:
+    metrics:
+      enabled: false
+
+bean:
+  user:
+    enable: false

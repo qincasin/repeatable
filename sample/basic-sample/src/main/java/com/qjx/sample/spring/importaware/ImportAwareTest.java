@@ -13,6 +13,7 @@ public class ImportAwareTest {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ImportAwareTest.class);
+        System.setProperty("aop.proxy.enable", "true");
         ProxyMode bean = applicationContext.getBean(ProxyMode.class);
         System.out.println(bean);
         applicationContext.close();

@@ -2,6 +2,7 @@ package com.qjx.sample.invoke.mark;
 
 import java.util.List;
 import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -14,14 +15,14 @@ import org.springframework.util.CollectionUtils;
  * @author qinjiaxing on 2023/4/23
  * @author <others>
  */
-@Configuration
-@ConditionalOnProperty(value = MarkConfiguration.USDK_MARK_PREFIX + ".enabled", havingValue = "true", matchIfMissing = true)
+// @Configuration
+// @ConditionalOnProperty(value = MarkConfiguration.USDK_MARK_PREFIX + ".enabled", havingValue = "true", matchIfMissing = true)
 public class MarkConfiguration {
 
     public static final String USDK_MARK_PREFIX = "usdk.mark";
 
-    @Bean
-    @ConditionalOnProperty
+    // @Bean
+    @ConditionalOnMissingBean
     public FeignRequestMarkEnhancer feignRequestMarkEnhancer(ObjectProvider<List<MarkFinder>> provider) {
         List<MarkFinder> markFinders = provider.getIfAvailable();
         if (!CollectionUtils.isEmpty(markFinders)) {
@@ -30,8 +31,8 @@ public class MarkConfiguration {
         return new FeignRequestMarkEnhancer();
     }
 
-    @Bean
-    @ConditionalOnProperty
+    // @Bean
+    @ConditionalOnMissingBean
     public SpringHttpRequestMarkEnhancer springHttpRequestMarkEnhancer(ObjectProvider<List<MarkFinder>> provider) {
         List<MarkFinder> markFinders = provider.getIfAvailable();
         if (!CollectionUtils.isEmpty(markFinders)) {
