@@ -12,6 +12,7 @@ import lombok.Data;
 @Data
 public class DetailDTO {
 
+    private String key;
     /**
      * 业务序列号
      */
